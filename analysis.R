@@ -11,5 +11,6 @@ ggplot(data = d) +
   geom_line(mapping = aes(x = t, y = C), col = "blue") +
   geom_line(mapping = aes(x = t, y = D), col = "green") +
   scale_x_datetime(labels = date_format("%b %Y")) +
+  scale_y_sqrt() +
   labs(x = "Date", y = "Number of hospital beds")
 
