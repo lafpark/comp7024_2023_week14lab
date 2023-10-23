@@ -8,7 +8,10 @@ library("scales")
 
 ggplot(data = d) +
   geom_line(mapping = aes(x = t, y = H), col = "red") +
+  geom_line(mapping = aes(x = t, y = C), col = "blue") +
+  geom_line(mapping = aes(x = t, y = D), col = "green") +
   scale_x_datetime(labels = date_format("%b %Y")) +
-  labs(x = "Date", y = "Number of hospital beds") +
-  scale_y_log10()
+  scale_y_sqrt() +
+  labs(x = "Date", y = "Number of hospital beds")
+
 
